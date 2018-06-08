@@ -17,9 +17,6 @@ public class MailServiceImpl implements MailService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    public MailServiceImpl(JavaMailSender javaMailSender) {
-    }
-
     @Override
     public void sendingRegistryMail(String to) {
 
