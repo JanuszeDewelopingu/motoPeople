@@ -1,4 +1,4 @@
-package com.motoPeople.motoPeople;
+package com.motoPeople;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
