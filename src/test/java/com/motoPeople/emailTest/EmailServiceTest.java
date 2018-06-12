@@ -45,16 +45,16 @@ public class EmailServiceTest {
     public void testEmail() throws InterruptedException, MessagingException {
         SimpleMailMessage message = new SimpleMailMessage();
 
-        message.setFrom("test@test.com");
-        message.setTo("test@test.com");
-        message.setSubject("test subject");
-        message.setText("test text");
+        message.setFrom("Users@Users.com");
+        message.setTo("Users@Users.com");
+        message.setSubject("Users subject");
+        message.setText("Users text");
         emailSender.send(message);
 
         Message[] messages = testSmtp.getReceivedMessages();
         assertEquals(1, messages.length);
-        assertEquals("test subject", messages[0].getSubject());
+        assertEquals("Users subject", messages[0].getSubject());
         String body = GreenMailUtil.getBody(messages[0]).replaceAll("=\r?\n", "");
-        assertEquals("test message", body);
+        assertEquals("Users message", body);
     }
 }
